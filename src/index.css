@@ -1,0 +1,38 @@
+@import "./globals.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-slate-950 text-white antialiased;
+  }
+}
+
+@layer components {
+  .csgo-gradient {
+    @apply bg-gradient-to-b from-slate-950 via-black to-slate-950;
+  }
+  
+  .csgo-card {
+    @apply bg-gradient-to-br from-slate-900 to-black border border-orange-900/30 rounded-2xl overflow-hidden;
+  }
+  
+  .csgo-button {
+    @apply bg-orange-600 hover:bg-orange-700 text-white font-bold transition-all transform hover:scale-105;
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+  }
+}
+
+@layer utilities {
+  .telegram-safe-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}
